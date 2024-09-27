@@ -1,0 +1,297 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+}
+
+/* The overall body part */
+body {
+    font-family: Arial, Lato, Calibri, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/sunset_mountain.jpg');
+    background-size:cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: calc(100vh + 25vw + 80px);
+    position:relative;
+}
+
+
+
+
+
+
+
+/* The header part */
+header {
+    background-color:rgb(12, 12, 12);
+    color: white;
+    padding: 10px 0;
+    font-family: 'Lato';
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+    height: 80px;
+    opacity: 80%;
+}
+
+header h1{
+    margin-top: 0.5vw;
+    text-align: center;
+    font-size: calc(30px);
+    font: 'Lato';
+}
+
+header p{
+    margin-bottom: 0.5vw;
+    text-align: center;
+    font-size: calc(12px);
+    font: 'Lato';
+}
+
+
+
+
+
+/* Flexbox Container for nav and main */
+.content-container {
+    display: flex;
+    flex-direction: row;
+    /* min-height: calc(100vh);  */
+    height:calc(100vh + 25vw + 80px);
+}
+
+
+
+
+
+
+
+/* Default nav for Laptop and Larger Screens */
+
+nav ul{
+    margin-top: 80px;
+    width: calc(220px + 4vw); 
+    background-color: rgb(12, 12, 12);
+    height: calc(100% - 80px); 
+    position: fixed;
+    padding-top: calc(6vh);
+    text-align: left;
+    padding-left: calc(1vw);
+    padding-right: calc(1vw);
+    list-style: none;
+    opacity: 70%;
+    overflow-y:auto;
+    padding-bottom: 120px;
+}
+
+#me{
+    color: white;
+    font-size: calc(18px + 0.2vw + 0.2vh);
+    font-family: 'Lato';
+    border: 3px solid white;
+    padding: calc(7px + 0.2vh + 0.2vw);
+    text-align: center;
+}
+
+#senior{
+    color:white;
+    font-size: calc(10px + 0.1vw + 0.1vh);
+    font-family: 'Lato';
+    margin-top: calc(0.5vh);
+    text-align: center;
+}
+
+#home{
+    margin-top: calc(7vh);
+}
+
+
+nav ul li a {
+    display:block;
+    color: white;
+    padding: 10px 0;
+    font-family:'Lato';
+    text-decoration-line: none;
+}
+
+/* For 7 nav bars. */
+.nav{
+    font-size: calc(12px + 0.2vw + 0.2vh);
+    border-bottom: 0.5px solid #2b2c34;
+}
+
+#cv{
+    margin-top: calc(7vh);
+    border: 0.5px solid white;
+    padding: calc(0.1vh + 0.1vw);
+    text-align: center;
+    font-size: calc(8px + 0.2vw + 0.2vh);
+}
+#msg{
+    margin-top: calc(0.7vh);
+    border: 0.5px solid white;
+    padding: calc(0.1vh + 0.1vw);
+    text-align: center;
+    font-size: calc(8px + 0.2vw + 0.2vh);
+}
+
+
+
+
+
+/* Main content for laptop and larger screens */
+main {
+    /* padding: 20px; */
+    height: calc(100vh + 25vw); 
+    position: relative;
+    flex-grow:1;
+    margin-top: 80px;
+    margin-left: calc(220px + 4vw);
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    /* overflow-y: auto; */
+    
+}
+
+/* large section */
+.resume-body {
+    width: 80%; 
+    max-width: 1500px; 
+    height: calc(100vh + 25vw); 
+    background-color: #f4f4f4;
+    color: #4A4C5A;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    text-align: center;
+    margin-top: calc(22px + 1vh + 1vw);
+    margin-bottom: calc(62px + 1vh + 1vw);
+    opacity: 90%;
+
+    border: 7px solid; 
+    border-image: linear-gradient(
+        to right, 
+        #F68A7C 18%,  
+        #4A4C5A 21%, 
+        #4A4C5A 60%,
+        #F68A7C 63%,
+        #F68A7C 80%,
+        #4A4C5A 83%  
+    ) 1;
+    border-left: none; 
+    border-right: none; 
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* The footer part */
+footer {
+    font-family: 'Lato';
+    background-color:rgb(12, 12, 12);
+    color: white;
+    text-align:center;
+    font-size: calc(10px + 0.5vh);
+    padding: 10px 0;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    opacity: 80%;
+    z-index: 10;
+}
+
+@media (max-width: 750px) {
+
+    header {
+        padding: 2px 0;
+        height: 50px;
+        opacity: 80%;
+    }
+    
+    header h1{
+        font-size: 26px;
+    }
+    
+    header p{
+        font-size: 10.5px;
+    }
+
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        height:calc(100vh + 25vw + 50px);
+    }
+
+    #me, #senior, #cv, #msg{
+        display: none;
+    }
+
+    #home{
+        margin-top: 0;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        height: 30px;
+        padding: 0;
+        width: 100%;
+        margin-top: 50px;
+        z-index: 10;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        opacity: 80%;
+    }
+
+    nav ul li a {
+        padding: calc(1px + 0.5vw);
+        text-align: center;
+        font-size: 18px;
+        display:flex;
+        flex-direction: row;
+    }
+
+    .nav{
+        font-size: calc(8px + 0.2vw + 0.2vh);
+        border: none;
+        text-align: center;
+
+    }
+
+    .content-container i{
+        display: none;
+    }
+
+
+
+    main {
+        margin-left: 0; 
+        height: auto;
+        position:relative;
+    }
+
+    .resume-body {
+        height: calc(80vh + 25vw);
+    }
+
+    footer {
+        font-size: calc(8px + 0.5vh);
+        padding: 8px 0;
+        height: 30px;
+    }    
+}
