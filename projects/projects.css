@@ -4,6 +4,8 @@
 }
 
 /* The overall body part */
+/* adjust the height here to increase the length of the page */
+/* You should increase the height of "body", "main", ".content-body" together to increase the length of the main section */
 body {
     font-family: Arial, Lato, Calibri, sans-serif;
     margin: 0;
@@ -12,7 +14,7 @@ body {
     background-size:cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    height: calc(140vh + 25vw + 65px);
+    height: calc(160vh + 25vw + 65px);
     position:relative;
 }
 
@@ -125,10 +127,11 @@ nav ul li a {
 }
 
 
-/* Main content for laptop and larger screens */
+/* Main content section (with white background) for laptop and larger screens */
+/* Change the height here can increase the height of the main section block */
 main {
     /* padding: 20px; */
-    height: calc(140vh + 25vw); 
+    height: calc(160vh + 25vw); 
     position: relative;
     flex-grow:1;
     margin-top: 65px;
@@ -142,11 +145,12 @@ main {
     
 }
 
-/* large section */
+/* main large section with white background */
+/* the height should stay the same as the height above */
 .content-body {
     width: 80%; 
     max-width: 1500px; 
-    height: calc(140vh + 25vw); 
+    height: calc(160vh + 25vw); 
     background-color: #f4f4f4;
     color: #4A4C5A;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 

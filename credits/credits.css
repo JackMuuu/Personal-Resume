@@ -4,6 +4,8 @@
 }
 
 /* The overall body part */
+/* adjust the height here to increase the length of the page */
+/* You should increase the height of "body", "main", ".content-body" together to increase the length of the main section */
 body {
     font-family: Arial, Lato, Calibri, sans-serif;
     margin: 0;
